@@ -5,7 +5,7 @@ using namespace std;
 
 typedef struct proccess
 {
-	int at,bt,ct,ta,wt,btt,pr;
+	int at,bt,ct,ta,wt,btt,pr;// at=arrival time, bt=burst time, ct=completion time, wt=waiting time, pr=priority
 	string pro_id;
 	/*
 	artime = Arrival time,
