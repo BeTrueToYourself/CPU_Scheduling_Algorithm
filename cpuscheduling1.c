@@ -3,7 +3,7 @@
 #include<string.h>
 void main()
 {
-    int et[20],at[10],n,i,j,temp,p[10],st[10],ft[10],wt[10],ta[10];
+    int et[20],at[10],n,i,j,temp,p[10],st[10],ft[10],wt[10],ta[10];     //et=Entry Time, at=Arrival Time
     int totwt=0,totta=0;
     float awt,ata;
     char pn[10][10],t[10];
@@ -27,7 +27,7 @@ void main()
                 temp=at[i];
                 at[i]=at[j];
                 at[j]=temp;
-                temp=et[i];
+                temp=et[i];  // temp=temporary variable
                 et[i]=et[j];
                 et[j]=temp;
                 strcpy(t,pn[i]);
