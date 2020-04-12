@@ -5,7 +5,7 @@ void main()
 {
     int et[20],at[10],n,i,j,temp,p[10],st[10],ft[10],wt[10],ta[10];     //et=Entry Time, at=Arrival Time
     int totwt=0,totta=0;
-    float awt,ata;
+    float awt,ata;   // awt=Average Waiting Time, ata=Average Turnaround Time 
     char pn[10][10],t[10];
     
     printf("Enter the number of process:");
