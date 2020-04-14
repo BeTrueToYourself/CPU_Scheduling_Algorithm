@@ -58,7 +58,7 @@ void main()
     }
     awt=(float)totwt/n;
     ata=(float)totta/n;
-    printf("\nPname\tarrivaltime\texecutiontime\tpriority\twaitingtime\ttatime");
+    printf("\nProcess Id\tArrival Time \tExecution Time\tpriority\tWaiting Time\tTurn Around Time");
     for(i=0; i<n; i++)
         printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d\t\t%5d",pn[i],at[i],et[i],p[i],wt[i],ta[i]);
     printf("\nAverage waiting time is:%f",awt);
