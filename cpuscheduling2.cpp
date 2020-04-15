@@ -5,7 +5,7 @@ using namespace std;
 
 typedef struct proccess
 {
-	int at,bt,ct,ta,wt,btt,pr;//  pr=priority
+	int at,bt,ct,ta,wt,btt,pr;
 	string pro_id;
 	/*
 	artime = Arrival time,
@@ -90,6 +90,7 @@ int main()
 		pro[i].ta=pro[i].ct-pro[i].at;
 		pro[i].wt=pro[i].ta-pro[i].btt;
 		//before executing make it in one statement
+		cout<<Process Id<<"\t"<<Arrival Time<<"\t"<<Burst Time<<"\t"<<Completion Time<<"\t"<<Turn Around Time<<"\t"<<Waiting Time<<"\t"<<Priority<<endl;
 		cout<<pro[i].pro_id<<"\t"<<pro[i].at<<"\t"<<pro[i].btt<<"\t"<<pro[i].ct<<"\t"<<pro[i].ta<<"\t"<<pro[i].wt<<"\t"<<pro[i].pr;
 		cout<<endl;
 	}
