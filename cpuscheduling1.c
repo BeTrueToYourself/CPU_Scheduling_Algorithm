@@ -16,9 +16,10 @@ void main()
         
         scanf("%s%d%d%d",pn[i],&at[i],&et[i],&p[i]);
     }
-    for(i=0; i<n; i++)
-        for(j=0; j<n; j++)
-        {
+    for (i = 0; i < n; ++i) 
+        for (j = i + 1; j < n; ++j) 
+
+          {
             if(p[i]<p[j])
             {
                 temp=p[i];
