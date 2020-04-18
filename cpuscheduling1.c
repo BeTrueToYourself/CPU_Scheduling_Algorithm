@@ -20,7 +20,7 @@ void main()
     // i And j is for iteration of control loop
     // temp = Temporary Variable for Swapping and Sorting.
     // bgt = Starting Time
-    // et = Finishing ime
+    // et = Finishing Time
     // ct = Completion Time
     // tat = Turn Around Time
     //wt = Waiting Time
@@ -84,19 +84,24 @@ void main()
         }
     for(i=0; i<n; i++)
     {
-        if(i==0)
+        if(i==0) // if arrival time = 0
         {
             bgt[i]=at[i];
-            wt[i]=bgt[i]-at[i];
+            wt[i]=bgt[i]-at[i]; // to find waiting time
             et[i]=bgt[i]+bt[i];
-            tat[i]=et[i]-at[i];
+            ct[i]=et[i]; // to find completion time
+            rt[i]=bgt[i]-at[i]; // to find response time
+            tat[i]=et[i]-at[i]; // to find turn around time
+            
         }
-        else
+        else    // if arrival time is not Zero.
         {
             bgt[i]=bgt[i-1];
-            wt[i]=bgt[i]-at[i];
+            wt[i]=bgt[i]-at[i]; // to find waiting time
             et[i]=bgt[i]+bt[i];
-            tat[i]=et[i]-at[i];
+            ct[i]=et[i]; // to find completion time
+            rt[i]=bgt[i]-at[i]; // to find response time
+            tat[i]=et[i]-at[i]; //  to find turn around time
         }
         
 		ct[0]=4;
@@ -117,7 +122,7 @@ void main()
         rt[0]=0;
         rt[1]=1;
         rt[2]=0;
-        rt[3]=6;
+        rt[3]=6; 
      
 	    toct+=ct[i]; // To Calculate The  Total Completion Time.   
         totat+=tat[i]; // To Calculate The Total Turn Around Time.
@@ -138,13 +143,17 @@ void main()
     for(i=0; i<n; i++)
         printf("\n   %s\t\t%5d\t\t%5d\t\t%5d\t\t\t%5d\t\t\t%5d\t\t%5d\t\t%5d",pn[i],at[i],bt[i],pr[i],ct[i],tat[i],wt[i],rt[i]); // Displaying The Ouput as per The Input given by The User.
     printf("\n===================================================================================================================================================================================================================\n");
-    printf("\nAverage Completion Time is : %f",act); // Displaying The Average Completion Time.
+    printf("\nAverage Completion Time is :- %f",act); // Displaying The Average Completion Time.
     printf("\n===================================================================================================================================================================================================================\n");
-    printf("\nAverage Turn Around Time is : %f",ata); // Displaying The Average Turn Around Time.
+    printf("\nAverage Turn Around Time is :- %f",ata); // Displaying The Average Turn Around Time.
         printf("\n===================================================================================================================================================================================================================\n");
-    printf("\nAverage Waiting Time is : %f",awt); // Displaying The Average Waiting Time.
+    printf("\nAverage Waiting Time is :- %f",awt); // Displaying The Average Waiting Time.
     printf("\n===================================================================================================================================================================================================================\n");
-    printf("\nAverage Response Time is : %f",art); // Displaying The Average Response Time.
+    printf("\nAverage Response Time is :- %f",art); // Displaying The Average Response Time.
     printf("\n*******************************************************************************************************************************************************************************************************************\n");    
     getch();
 }
+
+
+
+
